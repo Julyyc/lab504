@@ -1,0 +1,76 @@
+/*
+https://jam68ty.github.io/BucketTalk/post/php-mysql-login/
+config 與資料庫有關的設定檔
+index 包含SESSION的確認、登入的表單
+login 負責處理登入的動作    logout (瀏覽器會記錄登入過的使用者，除非你去清除cookie)
+register. 簡單的檢核機制、註冊的表單
+welcome 使用者成功登入後看到的畫面  之後可以透過$_SESSION控制不同身分使用者看到不同畫面
+*/
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+html,body{
+    height: 100%;
+}
+body{
+    background-color: rgb(248, 248, 248);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:標楷體;
+}
+.login, .signin{
+    width: 550px;
+    height: 500px;
+    background-color: rgba(0, 0, 0, .5);
+    border: 7px inset #6ab4fe;
+    border-radius: 10px;
+    box-shadow: 0 0 60px #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form{
+    width: 400px;
+    color: #fff;
+}
+.form h1{
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 4px solid #6ab4fe;
+}
+.form .group{
+    margin-bottom: 20px;
+}
+.form label{
+    line-height: 2;
+    font-family: "Gill Sans", sans-serif;
+}
+.group input{
+    width: 100%;
+    border: 5px solid #6ab4fe;
+    border-radius: 8px;
+    line-height: 3;
+}
+.form .HP, .OP{
+    font-size: 0;
+    margin-top: 30px;
+    text-align: center;
+}
+.form .btn{
+    font-style: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: #6ab4fe;
+    width: 130px;
+    padding: 20px;
+    color: #fff;
+}
+.form .btn+ .btn{
+    margin-left: 50px;
+}
+.HP .btn+.btns{
+    margin-left: 50px;
+}
